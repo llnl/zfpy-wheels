@@ -45,7 +45,7 @@ jobs:
                              PYTHON_LIB=$(python -c 'import sysconfig; print(sysconfig.get_config_var(\"LIBDIR\"))') &
                              mkdir build &
                              cd build &
-                             cmake .. -G \"Visual Studio 16 2019\" -DBUILD_ZFPY=ON -DBUILD_TESTING=OFF -DPYTHON_LIBRARY=$PYTHON_LIB -DPYTHON_INCLUDE_DIR=$PYTHON_INCLUDE -DBUILD_SHARED_LIBS=OFF &
+                             cmake .. -G \"Visual Studio 17 2022\" -DBUILD_ZFPY=ON -DBUILD_TESTING=OFF -DPYTHON_LIBRARY=$PYTHON_LIB -DPYTHON_INCLUDE_DIR=$PYTHON_INCLUDE -DBUILD_SHARED_LIBS=OFF &
                              cmake --build . --config Release &
                              cd .. &
                              python setup.py bdist_wheel"
